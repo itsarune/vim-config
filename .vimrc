@@ -9,7 +9,9 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
+
+Bundle 'nachumk/systemverilog.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
