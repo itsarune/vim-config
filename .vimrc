@@ -9,9 +9,11 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 Bundle 'nachumk/systemverilog.vim'
+  
+Plugin 'junegunn/fzf'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -31,4 +33,5 @@ filetype plugin indent on    " required
 fixdel
 set nu
 set tabstop=4
+set shiftwidth=4
 set expandtab
