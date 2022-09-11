@@ -15,6 +15,10 @@ Bundle 'nachumk/systemverilog.vim'
   
 Plugin 'junegunn/fzf'
 
+Plugin 'HerringtonDarkholme/yats.vim'
+
+Plugin 'neoclide/coc.nvim'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -35,3 +39,4 @@ set nu
 set tabstop=4
 set shiftwidth=4
 set expandtab
+syntax on
