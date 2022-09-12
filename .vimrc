@@ -40,3 +40,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 syntax on
+
+" Disable YCM for typescript
+let g:ycm_filetype_blacklist = { 'typescript' : 1 }
