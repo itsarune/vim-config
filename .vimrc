@@ -9,8 +9,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Plugin 'Valloric/YouCompleteMe'
-
 Bundle 'nachumk/systemverilog.vim'
   
 Plugin 'junegunn/fzf'
@@ -20,6 +18,8 @@ Plugin 'HerringtonDarkholme/yats.vim'
 Plugin 'neoclide/coc.nvim'
 
 Plugin 'xuhdev/vim-latex-live-preview'
+
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -81,3 +81,6 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
+
+
+colorscheme gruvbox
