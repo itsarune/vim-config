@@ -82,5 +82,5 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nmap <leader>qf  <Plug>(coc-fix-current)
 
 
-
+set bg=dark
 colorscheme gruvbox
