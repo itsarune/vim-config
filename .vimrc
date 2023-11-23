@@ -81,6 +81,8 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
-
-
 colorscheme gruvbox
+
+" project specific vimrc
+set exrc
+set secure
