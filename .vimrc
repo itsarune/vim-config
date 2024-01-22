@@ -21,6 +21,10 @@ Plugin 'xuhdev/vim-latex-live-preview'
 
 Plugin 'morhetz/gruvbox'
 
+Plugin 'preservim/nerdtree'
+
+Plugin 'fatih/vim-go'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -48,7 +52,8 @@ let g:ycm_filetype_blacklist = { 'typescript' : 1 }
 
 " LaTeX
 autocmd Filetype tex setl updatetime=2
-let g:livepreview_previewer = 'open -a Preview'
+let g:livepreview_engine = 'pdflatex' . ' -shell-escape'
+let g:livepreview_previewer = 'okular'
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: There's always complete item selected by default, you may want to enable
@@ -87,3 +92,9 @@ colorscheme gruvbox
 " project specific vimrc
 set exrc
 set secure
+
+" nerdtree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
