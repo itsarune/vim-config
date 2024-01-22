@@ -45,6 +45,7 @@ set nu
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set colorcolumn=120
 syntax on
 
 " Disable YCM for typescript
