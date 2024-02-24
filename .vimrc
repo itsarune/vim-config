@@ -25,7 +25,14 @@ Plugin 'preservim/nerdtree'
 
 Plugin 'fatih/vim-go'
 
+Plugin 'godlygeek/tabular'
+
+Plugin 'preservim/vim-markdown'
+
+Plugin 'github/copilot.vim'
+
 call vundle#end()            " required
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -98,3 +105,11 @@ set secure
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
+
+" markdown
+autocmd FileType markdown setlocal spell spelllang=en_gb
+
+let g:vim_markdown_folding_disabled = 0
+
+" copilot
+let g:copilot_filetypes = {'markdown': v:true}
