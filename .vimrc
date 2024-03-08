@@ -27,7 +27,14 @@ Plugin 'fatih/vim-go'
 
 Plugin 'iamcco/markdown-preview.nvim'
 
+Plugin 'godlygeek/tabular'
+
+Plugin 'preservim/vim-markdown'
+
+Plugin 'github/copilot.vim'
+
 call vundle#end()            " required
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -82,6 +89,12 @@ endfunction
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-@> coc#refresh()
 
+" GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
@@ -104,3 +117,10 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 " markdown preview
 " do not close the preview tab when switching to other buffers
 let g:mkdp_auto_close = 0
+
+autocmd FileType markdown setlocal spell spelllang=en_gb
+
+let g:vim_markdown_folding_disabled = 0
+
+" copilot
+let g:copilot_filetypes = {'markdown': v:true}
