@@ -25,6 +25,8 @@ Plugin 'preservim/nerdtree'
 
 Plugin 'fatih/vim-go'
 
+Plugin 'iamcco/markdown-preview.nvim'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -98,3 +100,7 @@ set secure
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
+
+" markdown preview
+" do not close the preview tab when switching to other buffers
+let g:mkdp_auto_close = 0
