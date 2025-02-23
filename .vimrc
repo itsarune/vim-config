@@ -25,6 +25,8 @@ Plugin 'preservim/nerdtree'
 
 Plugin 'fatih/vim-go'
 
+Plugin 'iamcco/markdown-preview.nvim'
+
 Plugin 'godlygeek/tabular'
 
 Plugin 'preservim/vim-markdown'
@@ -111,7 +113,10 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 
-" markdown
+" markdown preview
+" do not close the preview tab when switching to other buffers
+let g:mkdp_auto_close = 0
+
 autocmd FileType markdown setlocal spell spelllang=en_gb
 
 let g:vim_markdown_folding_disabled = 0
