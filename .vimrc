@@ -131,3 +131,5 @@ if has('unix')
     let s:uname = system('uname')
     if s:uname == 'Darwin\n'
         let g:livepreview_previewer = 'open -a Vivaldi'
+    endif
+endif
