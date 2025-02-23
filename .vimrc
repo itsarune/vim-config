@@ -61,7 +61,6 @@ let g:ycm_filetype_blacklist = { 'typescript' : 1 }
 " LaTeX
 autocmd Filetype tex setl updatetime=2
 let g:livepreview_engine = 'pdflatex' . ' -shell-escape'
-let g:livepreview_previewer = 'okular'
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: There's always complete item selected by default, you may want to enable
@@ -118,4 +117,12 @@ autocmd FileType markdown setlocal spell spelllang=en_gb
 let g:vim_markdown_folding_disabled = 0
 
 " copilot
-let g:copilot_filetypes = {'markdown': v:true}
+let g:copilot_filetypes = {
+            \ 'markdown': v:true,
+            \ 'racket': v:true,
+            \ }
+
+if has('unix')
+    let s:uname = system('uname')
+    if s:uname == 'Darwin\n'
+        let g:livepreview_previewer = 'open -a Vivaldi'
